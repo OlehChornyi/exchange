@@ -25,7 +25,7 @@ if (flutterVersionName == null) {
 android {
     namespace "com.smartshift.exchange"
     compileSdk flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    ndkVersion "26.3.11579264"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -49,6 +49,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -58,10 +59,15 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation 'com.android.support:multidex:2.0.1'
+}

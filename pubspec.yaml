@@ -1,7 +1,7 @@
 name: exchange
 description: "Exchange app."
 publish_to: 'none'
-version: 0.0.7
+version: 0.0.8
 
 environment:
   sdk: '>=3.3.3 <4.0.0'
@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   http: ^1.2.1
+  home_widget: ^0.6.0
 
 dev_dependencies:
   flutter_test:
